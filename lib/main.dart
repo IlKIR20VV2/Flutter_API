@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_application_2/pages/menu.dart';
+import 'package:flutter_driver/driver_extension.dart';
+import 'package:counter_app/main.dart';
 
 void main() {
-  runApp(Home());
-}
+  enableFlutterDriverExtension();
 
-class Home extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(
-        title: Text("Приложение"),
-        centerTitle: true,
-      )),
-    );
-  }
+  runApp(const MaterialApp(
+    title: 'Navigation Basics',
+    // home: MyApp(),
+    home: FirstRoute(),
+  ));
 }
